@@ -1,0 +1,39 @@
+{
+  "hosting": [
+    {
+      "target": "live",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "development",
+      "public": "app/customer",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites":[{
+        "source": "/restaurant.json",
+        "function": "RestaurantJson"
+      },{
+        "source": "/anal.json",
+        "function": "Anal"
+      },
+      {
+        "source": "/**",
+        "destination": "/index.html"
+      }]
+    }
+  ],
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ],
+    "source": "functions"
+  }
+}

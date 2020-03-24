@@ -1,0 +1,24 @@
+Id,Name,Description,IsNonVeg,Price,Section
+1,Veg Manchurian,NA,FALSE,150,Starters
+2,Gobi Manchurian,NA,FALSE,150,Starters
+3,Jeera Aloo,NA,FALSE,150,Starters
+4,Veg 65,NA,FALSE,150,Starters
+5,Aloo 65,NA,FALSE,150,Starters
+6,Boti Mutton Kebab,NA,TRUE,180,Starters
+7,Seekh Kebab,NA,TRUE,220,Starters
+8,Fish Tikka,NA,TRUE,220,Starters
+9,Reshmi Kebab,NA,TRUE,230,Starters
+10,Veg Corn Soup,NA,FALSE,70,Soups
+11,Veg Hot And Sour Soup,NA,FALSE,70,Soups
+12,Veg Noodles Soup,NA,FALSE,70,Soups
+13,Chicken Corn Soup,NA,TRUE,80,Soups
+14,Chicken Noodles Soup,NA,TRUE,80,Soups
+15,Kadai Paneer,NA,FALSE,120,Main Course
+16,Kadai Vegetable,NA,FALSE,150,Main Course
+17,Paneer Chatpata,NA,FALSE,180,Main Course
+18,Mutton Rogan Josh,NA,TRUE,170,Main Course
+19,Mutton Masala,NA,TRUE,180,Main Course
+20,Fish Masala,NA,TRUE,200,Main Course
+21,Badam Firni,NA,FALSE,40,Desserts
+22,Qubani ka Meetha,NA,FALSE,40,Desserts
+23,Double ka Meetha,NA,FALSE,50,Desserts

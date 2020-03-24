@@ -1,0 +1,273 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    position: fixed;
+}
+
+#landscape {
+    display: none;
+}
+
+#loading {
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+#loadingText {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+#mainContent {
+    display: none;
+}
+
+.footer {
+    position: fixed;
+    /*height: 20%;*/
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    display: table;
+}
+
+.footerRow {
+    display: table-row;
+    background-color: #2f938e;
+}
+
+.categoryIcon {
+    display: table-cell;
+    width: 20px;
+    height: 20px;
+    /*margin-left: 12px;*/
+    margin: auto;
+}
+
+.flunkey {
+    display: table-cell;
+    font-family: Avenir;
+    font-size: 24px;
+    font-style: normal;
+    font-stretch: normal;
+    /*line-height: normal;*/
+    /** LINE HEIGHT IS DYNAMICALLY SET
+      TO MAKE TEXT VERTICAALIGN **/
+    letter-spacing: 6px;
+    color: #ffa500;
+}
+
+.feedbackIcon {
+    display: table-cell;
+    width: 20px;
+    height: 20px;
+    /*margin-right: 4px;*/
+    margin: auto;
+}
+
+#menuScroll {
+    overflow: auto;
+    padding: 0;
+    height: 100px;
+    /*Not setting this to temporary doesn't allow the scroll*/
+    -webkit-overflow-scrolling: touch;
+}
+
+.section {
+    padding: 0;
+}
+
+.sectionHeader {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 2px;
+    padding: 0px;
+    margin-bottom: 20px;
+    color: #ffa500;
+}
+
+.sectionContent {
+    padding: 0;
+}
+
+.itemTable {
+    display: table;
+    padding: 0px;
+    margin: 0px;
+}
+
+div.item {
+    display: table-row;
+}
+
+p.name {
+    padding-left: 12px;
+    display: table-cell;
+    width: 80%;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+img.nonVegIcon {
+    display: table-cell;
+    height: 12px;
+    width: 12px;
+    background-color: white;
+}
+
+p.price {
+    padding-right: 12px;
+    display: table-cell;
+    width: 10%;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+div.itemDescription {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+
+p.description {
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url("Fonts/-Bold.otf");
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    z-index: 1;
+    /* Sit on top */
+    position: fixed;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #ffa500;
+    margin: auto;
+    padding: 20px;
+    position: fixed;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: 0;
+    /*border: 1px solid #888;*/
+    width: 100%;
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 0;
+    border-width: 0;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    -webkit-appearance: none;
+    background-color: #ffa500;
+    border-radius: 0;
+    border-width: 0;
+    color: #000000;
+}
+
+.feedbackText {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+}
+
+label {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+#submit {
+    display: none;
+}
+
+#feedbackSecondary {
+    display: none;
+}
+
+#feedbackSubmitText {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #ffa500;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125035674-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-125035674-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
+    <!-- Styles start here -->
+    <style>
+        :root {
+        --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    }
+
+    *,
+     ::after,
+     ::before {
+        box-sizing: border-box
+    }
+
+    html {
+        font-family: sans-serif;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+        -webkit-tap-highlight-color: transparent
+    }
+
+    body {
+        margin: 0;
+        font-family: monospace;
+        /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
+        font-size: 1rem;
+        font-weight: 400;
+        /*line-height: 1.5*/
+        color: #000000;
+        text-align: left;
+        background-color: #ffffff;
+        position: fixed;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem
+    }
+
+    img {
+        vertical-align: middle;
+        border-style: none
+    }
+
+    button {
+        border-radius: 0;
+        border-width: 0;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit
+    }
+
+    button,
+    input {
+        overflow: visible
+    }
+
+    button,
+    select {
+        text-transform: none
+    }
+
+    [type=reset],
+    [type=submit],
+    button,
+    html [type=button] {
+        -webkit-appearance: button
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+        box-sizing: border-box;
+        padding: 0
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    .alert {
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem
+    }
+
+    .alert-warning {
+        color: #856404;
+        background-color: #fff3cd;
+        border-color: #ffeeba
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        outline: 0
+    }
+
+    .modal-content {
+        position: fixed;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-clip: padding-box;
+        /*border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: .3rem;*/
+        bottom: 0;
+        padding: 20px;
+        outline: 0
+    }
+
+    .text-center {
+        text-align: center!important
+    }
+
+    .close {
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #ff0000;
+    }
+
+    .footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        display: table;
+    }
+
+    .footerIcon {
+        display: table-cell;
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        margin-top: 7px;
+    }
+
+    #company {
+        display: table-cell;
+        font-size: 1.5rem;
+        font-family: Cabin,sans-serif;
+        letter-spacing: 0.2rem;
+        
+    }
+
+    .menuScroll {
+        overflow: auto;
+        height: 100px;
+        /*Not setting this to temporary doesn't allow the scroll*/
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #feedbackSubmitText {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .feedbackText {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: .5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        vertical-align: middle;
+    }
+
+    #loading {
+        width: 300px;
+        position: fixed;
+        top: 48%;
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    #loadingText {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #000000;
+    }
+    </style>
+</head>
+
+<body onload="init()">
+    <!-- Landscape warning -->
+    <div class="alert text-center alert-warning" id="landscape" style="display:none">
+        <strong>Warning!</strong> Sorry for the inconvenience.Currently we do not support landscape mode. Please rotate your device to portrait mode.
+        <br>
+        <br> For any feedback or queries, please write us at "info@vshopr.com" or call us on +91-9912581389
+    </div>
+    <!-- Category modal -->
+    <div class="modal" id="categoryModal">
+        <!-- Modal content -->
+        <div class="modal-content" id="categoryModalContent">
+            <span class="close" onclick="closeCategoryPanel()">&times;</span>
+            <!-- Sample content
+            <button>
+                Recommended
+            </button>
+          -->
+        </div>
+    </div>
+    <!-- Feedback modal -->
+    <div class="modal" id="feedbackModal">
+        <!-- Modal content -->
+        <div class="modal-content" id="feedbackModalContent">
+            <span class="close" onclick="closeFeedbackPanel()">&times;</span>
+            <br>
+            <div id="feedbackMain">
+                <div>
+                    <p class="feedbackText">Which features you would like to see ?</p>
+                    <input type="checkbox" onclick="onCheckboxStateChange()">
+                    <label for="checkbox">Visualize the food</label>
+                    <br>
+                    <input type="checkbox" onclick="onCheckboxStateChange()">
+                    <label for="checkbox">Order food</label>
+                    <br>
+                    <br>
+                    <button onclick="submitFeedback()" id="submit" style="display: none">Submit</button>
+                </div>
+            </div>
+            <div id="feedbackSecondary" style="display: none">
+                <p id="feedbackSubmitText">Thank you for the feedback</p>
+            </div>
+        </div>
+    </div>
+    <!-- Loading screen -->
+    <div id="loading">
+        <p class="text-center" id="loadingText">A hungry stomach has no ears</p>
+    </div>
+    <div id="mainContent" style="display: none;">
+        <!-- Background image code -->
+        <!--<img src="https://cdn.glitch.com/0e68f0f6-7041-46bd-8793-fbe834392fda%2Fback.jpg?1533294889702" id="bg">-->
+        <!-- Footer and icons -->
+        <div class="footer" id="footer">
+            <div class="text-center" style="display:table-row;" id="footerRow">
+                <img class="footerIcon" id="categoryIcon" onclick="openCategoryPanel()" />
+                <p id="company">Flunkey</p>
+                <img class="footerIcon" id="feedbackIcon" onclick="openFeedbackPanel()" />
+            </div>
+        </div>
+        <!-- Scrollable content -->
+        <div class="menuScroll text-center" id="menuScroll">
+            <p id="restaurant" style="font-weight: 700;font-size: 1.3rem"></p>
+            <!-- Sample content
+            <div class="text-center section">
+                <p class="sectionHeader" id="Starters">
+                    Starters
+                </p>
+                <div class="container text-center sectionContent">
+                    <div class="container itemTable">
+                        <div class="item">
+                            <p class="text-left name">
+                                Chicken Biryani
+                            </p>
+                            <img class="vegIcon" src="https://cdn.glitch.com/0e68f0f6-7041-46bd-8793-fbe834392fda%2Fstraw.png?1533294562171">
+                            <p class="text-right price">
+                                57
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container itemDescription">
+                        <p class="text-left description">
+                            Here is the description
+                        </p>
+                    </div>
+                </div>
+            </div>
+          -->
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

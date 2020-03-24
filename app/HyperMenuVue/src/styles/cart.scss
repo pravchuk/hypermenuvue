@@ -1,0 +1,18 @@
+$secondaryColor: #1ab805;
+$secondaryColorContrast: #ffffff;
+
+.mini-cart {
+    height: 48px;
+    overflow: hidden;
+    z-index: 3;
+    position:fixed;
+    bottom: 0px;
+    width: 100%;
+    background: $secondaryColor;
+    color: $secondaryColorContrast;
+    .short-view {
+        width:100%;
+        margin: 13px auto;
+        vertical-align: middle;
+    }
+}

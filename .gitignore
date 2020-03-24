@@ -1,0 +1,8 @@
+.DS_Store
+.firebase
+.firebaserc
+functions/node_modules
+app/RestaurantUploader/node_modules
+app/RestaurantUploader/Data
+app/RestaurantUploader/zero-cf369-firebase-adminsdk-bt2k4-8218ad7ef7.json
+package-lock.json

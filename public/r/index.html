@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125035674-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125035674-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+    <script src="firebaseInit.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800">
+</head>
+
+<body>
+    <!-- Landscape warning -->
+    <div class="alert text-center alert-warning" id="landscape">
+        <strong>Warning!</strong> Sorry for the inconvenience.Team at flunkey is working hard to support it in landscape mode. Please rotate your device to portrait mode.
+        <br>
+        <br> For any feedback, please write us at "info@vshopr.com" or call us on +91-9912581389
+    </div>
+    <!-- Category modal -->
+    <div class="modal" id="categoryModal">
+        <!-- Modal content -->
+        <div class="modal-content" id="categoryModalContent">
+            <span class="close" onclick="closeCategoryPanel()">&times;</span>
+            <!-- Sample content
+            <button>
+                Recommended
+            </button>
+          -->
+        </div>
+    </div>
+    <!-- Feedback modal -->
+    <div class="modal" id="feedbackModal">
+        <!-- Modal content -->
+        <div class="modal-content" id="feedbackModalContent">
+            <span class="close" onclick="closeFeedbackPanel()">&times;</span>
+            <br>
+            <div id="feedbackMain">
+                <div class="checkbox">
+                    <p class="feedbackText">Which features you would like to see ?</p>
+                    <input type="checkbox" onclick="onCheckboxStateChange()">
+                    <label for="checkbox">Visualize the food</label>
+                    <br>
+                    <input type="checkbox" onclick="onCheckboxStateChange()">
+                    <label for="checkbox">Order food</label>
+                    <br>
+                    <button onclick="submitFeedback()" id="submit">Submit</button>
+                </div>
+            </div>
+            <div id="feedbackSecondary">
+                <p id="feedbackSubmitText">Thank you for the feedback</p>
+            </div>
+        </div>
+    </div>
+    <!-- Loading screen -->
+    <div id="loading">
+        <p class="text-center" id="loadingText">A hungry stomach has no ears</p>
+    </div>
+    <div id="mainContent">
+        <!-- Background image code -->
+        <!--<img src="https://cdn.glitch.com/0e68f0f6-7041-46bd-8793-fbe834392fda%2Fback.jpg?1533294889702" id="bg">-->
+        <!-- Footer and icons -->
+        <div class="container footer" id="footer">
+            <div class="text-center footerRow" id="footerRow">
+                <img class="categoryIcon" src="Assets/Expand.png" onclick="openCategoryPanel()" />
+                <p class="flunkey" id="flunkey"> FLUNKEY </p>
+                <img class="feedbackIcon" src="Assets/Feedback.png" onclick="openFeedbackPanel()" />
+            </div>
+        </div>
+        <!-- Scrollable content -->
+        <div class="text-center" id="menuScroll">
+            <!-- Sample content
+            <div class="text-center section">
+                <p class="sectionHeader" id="Starters">
+                    Starters
+                </p>
+                <div class="container text-center sectionContent">
+                    <div class="container itemTable">
+                        <div class="item">
+                            <p class="text-left name">
+                                Chicken Biryani
+                            </p>
+                            <img class="vegIcon" src="https://cdn.glitch.com/0e68f0f6-7041-46bd-8793-fbe834392fda%2Fstraw.png?1533294562171">
+                            <p class="text-right price">
+                                57
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container itemDescription">
+                        <p class="text-left description">
+                            Here is the description
+                        </p>
+                    </div>
+                </div>
+            </div>
+          -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
