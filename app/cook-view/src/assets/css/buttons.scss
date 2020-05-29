@@ -1,0 +1,17 @@
+button{
+    padding: 10px;
+    border: 2px black;
+    border-radius: 5px;
+    margin:10px;
+    &.b-order{
+        background-color: green;
+        color: white;
+        float: left;
+    }
+    
+    &.b-reject{
+        background-color: red;
+        color: white;
+        float: right;
+    }
+}
